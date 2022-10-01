@@ -1,13 +1,12 @@
 import { Header } from "./components/header";
+import { Rating } from "./components/rating";
 
 function App() {
 	return (
 		<div className="wrapper">
 			<Header />
 			<main className="main">
-				<section className="content">
-					<div className="content__container">hi</div>
-				</section>
+				<Rating />
 			</main>
 		</div>
 	);
