@@ -4,9 +4,11 @@ function App() {
 	return (
 		<div className="wrapper">
 			<Header />
-			<section className="app">
-				<div className="app__container">hi</div>
-			</section>
+			<main className="main">
+				<section className="content">
+					<div className="content__container">hi</div>
+				</section>
+			</main>
 		</div>
 	);
 }
