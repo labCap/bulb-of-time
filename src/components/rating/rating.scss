@@ -18,8 +18,93 @@
 	&__body {
 	}
 
+	&__add-mess {
+		padding: 40px;
+		background: inherit;
+		width: 100%;
+		position: relative;
+		transition: background-color 0.3s ease-in-out;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 30px;
+			padding: 2px;
+			border-radius: 10px;
+			background-color: #dfd300;
+		}
+
+		&::before {
+			transform: translate(-50%, -50%) rotate(90deg);
+		}
+
+		&:hover {
+			background-color: lighten($color: #272727, $amount: 5%);
+		}
+	}
+
+	&__input-box {
+		width: 500px;
+		background-color: #222;
+		border-radius: 10px;
+		overflow: hidden;
+		position: absolute;
+		z-index: 10;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease-in-out;
+		&.open {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__add-btn {
+		padding: 40px;
+		background: inherit;
+		width: 100%;
+		position: relative;
+		transition: background-color 0.3s ease-in-out;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 30px;
+			padding: 2px;
+			border-radius: 10px;
+			background-color: #dfd300;
+		}
+
+		&::before {
+			transform: translate(-50%, -50%) rotate(90deg);
+		}
+
+		&:hover {
+			background-color: lighten($color: #272727, $amount: 5%);
+		}
+	}
+
+	&__input-box-inner {
+		padding: 50px 50px 20px;
+		display: flex;
+		flex-direction: column;
+	}
+
 	&__table {
 		border-spacing: 0;
+		width: 100%;
 	}
 
 	&__info {
@@ -29,5 +114,39 @@
 		padding: 50px;
 		color: #fff;
 		text-align: center;
+	}
+}
+
+label {
+	font-size: 17px;
+	margin-bottom: 10px;
+}
+
+.input {
+	height: 30px;
+	border-radius: 5px;
+	background-color: #333;
+	color: #fff;
+	padding: 0 10px;
+
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+}
+
+.overlay {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out;
+	&.open {
+		opacity: 1;
+		visibility: visible;
 	}
 }
