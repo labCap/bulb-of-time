@@ -48,13 +48,15 @@
 	}
 
 	&__input-box {
-		width: 500px;
+		width: 100%;
+		max-width: 500px;
+		min-width: 300px;
 		background-color: #222;
 		border-radius: 10px;
 		overflow: hidden;
 		position: absolute;
 		z-index: 10;
-		top: 50%;
+		// top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 
@@ -97,7 +99,7 @@
 	}
 
 	&__input-box-inner {
-		padding: 50px 50px 20px;
+		padding: 50px 20px 20px;
 		display: flex;
 		flex-direction: column;
 	}

@@ -37,7 +37,10 @@ export const Rating = () => {
 
 					<button
 						className="rating__add-mess"
-						onClick={() => setOpenInputBox(!openInputBox)}
+						onClick={() => {
+							setOpenInputBox(true);
+							document.body.classList.add("lock");
+						}}
 					></button>
 
 					<div
@@ -72,6 +75,7 @@ export const Rating = () => {
 						className={openInputBox ? "overlay open" : "overlay"}
 						onClick={() => {
 							setOpenInputBox(false);
+							document.body.classList.remove("lock");
 						}}
 					></div>
 
