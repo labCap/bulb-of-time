@@ -9,9 +9,7 @@ export const Rating = () => {
 			<div className="rating__container">
 				<div className="rating__inner">
 					<div className="rating__header">
-						<h1 className="big-title">
-							Цей список де ти можеш залишити щось на згадку
-						</h1>
+						<h1>Цей список де ти можеш залишити щось на згадку</h1>
 					</div>
 					<div className="rating__body">
 						<table className="rating__table">
