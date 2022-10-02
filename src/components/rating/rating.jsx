@@ -32,7 +32,7 @@ export const Rating = () => {
 			<div className="rating__container">
 				<div className="rating__inner">
 					<div className="rating__header">
-						<h1>Цей список де ти можеш залишити щось на згадку</h1>
+						<h1>Це список де ти можеш залишити щось на згадку</h1>
 					</div>
 
 					<button
