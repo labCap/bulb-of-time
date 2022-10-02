@@ -13,14 +13,18 @@ export const Rating = () => {
 	const [openInputBox, setOpenInputBox] = React.useState(false);
 
 	const addNewItemList = () => {
-		num++;
 		const inputMess = document.getElementById("mess").value;
 		const inputName = document.getElementById("name").value;
 
-		setListItem((prev) => [
-			...prev,
-			{ id: num, mess: inputMess, name: inputName },
-		]);
+		if (inputMess && inputName) {
+			num++;
+			setListItem((prev) => [
+				...prev,
+				{ id: num, mess: inputMess, name: inputName },
+			]);
+		} else {
+			alert("Заповни всі поля");
+		}
 	};
 
 	return (
@@ -49,14 +53,14 @@ export const Rating = () => {
 								type="text"
 								className="input"
 								id="mess"
-								value={""}
+								// value={""}
 							/>
 							<label htmlFor="name">Твоє ім'я:</label>
 							<input
 								type="text"
 								className="input"
 								id="name"
-								value={""}
+								// value={""}
 							/>
 						</div>
 						<button
@@ -66,7 +70,9 @@ export const Rating = () => {
 					</div>
 					<div
 						className={openInputBox ? "overlay open" : "overlay"}
-						onClick={() => setOpenInputBox(false)}
+						onClick={() => {
+							setOpenInputBox(false);
+						}}
 					></div>
 
 					<div className="rating__body">
