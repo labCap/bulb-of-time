@@ -21,4 +21,13 @@
 	&__table {
 		border-spacing: 0;
 	}
+
+	&__info {
+		width: 100%;
+		font-size: 18px;
+		font-weight: 500;
+		padding: 50px;
+		color: #fff;
+		text-align: center;
+	}
 }
