@@ -100,21 +100,3 @@ export const Rating = () => {
 		</section>
 	);
 };
-
-// const btnShow = document.querySelector(".rating__add-mess");
-// const inputBox = document.querySelector(".rating__input-box");
-// const overlay = document.querySelector(".overlay");
-
-// console.log(btnShow);
-// console.log(inputBox);
-// console.log(overlay);
-
-// btnShow.addEventListener("click", () => {
-// 	inputBox.classList.add("open");
-// 	overlay.classList.add("open");
-// });
-
-// overlay.addEventListener("click", () => {
-// 	overlay.classList.remove("open");
-// 	inputBox.classList.remove("open");
-// });
